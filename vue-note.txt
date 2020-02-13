@@ -1,0 +1,4 @@
+1. v-if
+2. v-for
+3. v-on
+4. v-show

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue If</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+      <h1 v-if="show">Hello world</h1>       <!--v-if remove from-->
+      <button v-on:click="toggleHeading">Show</button>
+      <p v-show="show">Hello world V Show </p>     <!--v-show display none-->
+    </div>
+  
+    <div id="root">
+        <h1>{{title}}</h1>
+    </div>
+  
+
+    
+  <script>
+    var app =    new Vue({
+            el:"#app",
+        methods:{
+            toggleHeading:function(){
+            this.show = !this.show;
+        }
+        },
+        data:{
+                show:true
+            }
+        })
+
+     var root =   new Vue({
+            el:"#root",
+            data:{
+                title:"Hello World Root!"
+            }
+        })
+    </script>
+</body>
+</html>
