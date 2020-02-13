@@ -11,21 +11,24 @@
     <div id="app">
       <h1 v-if="show">Hello world</h1>       <!--v-if remove from-->
       <button v-on:click="toggleHeading">Show</button>
+      <button v-on:click="changeTitle">Change Title</button>
       <p v-show="show">Hello world V Show </p>     <!--v-show display none-->
     </div>
   
     <div id="root">
         <h1>{{title}}</h1>
     </div>
-  
 
-    
+
   <script>
     var app =    new Vue({
             el:"#app",
         methods:{
             toggleHeading:function(){
             this.show = !this.show;
+        },
+        changeTitle:function(){
+            root.title = "Hi"
         }
         },
         data:{
@@ -39,6 +42,7 @@
                 title:"Hello World Root!"
             }
         })
+
     </script>
 </body>
 </html>
