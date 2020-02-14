@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <button @click="increase">Increase</button>
+        <button @click="decrease">Decrease  </button>
+       
+        <p>Count : {{count}}</p>
+        <p>DoubleCount : {{doubleCount}}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app",
+            methods:{
+                increase:function(){
+                    this.count ++;
+                },
+                decrease:function(){
+                    console.log('hello i');
+                    this.count --;
+                },
+                
+            },
+            computed:{
+               
+                doubleCount:function(){
+                    console.log('hello not');
+                    if(this.count>=0){
+                        return this.count * 2;
+                    }
+                    return 0;
+                }
+            },
+            data:{
+                count:0   , 
+                title:"Hi"            
+            }
+        })
+    </script>
+</body>
+</html>

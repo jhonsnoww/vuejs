@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Binding</title>
     <script src="vue.js"></script>
 </head>
 <body>
 <div id="app">
+   
     <button @click="changeType">Change</button>
     <input v-bind:type="inputType" v-model="text">
     <h1>{{text}}</h1>
+
 </div>
 
 
